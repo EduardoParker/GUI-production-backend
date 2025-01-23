@@ -1,6 +1,7 @@
 const { pool } = require("../db.js");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+require("dotenv").config();
 
 module.exports.getUsers = async (req, res) => {
   const { rows } = await pool.query("SELECT * FROM users");
@@ -98,7 +99,7 @@ module.exports.login = (req, res) => {
           if (isMatch) {
             const payload = { userId: user.id };
 
-            const token = jwt.sign(payload, "fufupapachon", {
+            const token = jwt.sign(payload, process.env.JWT_SECRET, {
               expiresIn: "1d",
             });
             res.status(200).json({ token });

@@ -8,7 +8,7 @@ module.exports = (req, res, next) => {
   const token = authorization.replace("Bearer ", "");
   let payload;
   try {
-    payload = jwt.verify(token, "fufupapachon");
+    payload = jwt.verify(token, process.env.JWT_SECRET);
   } catch (e) {
     const err = new Error("Se requiere autorización, token invalido");
     err.statusCode = 401;
