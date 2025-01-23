@@ -1,6 +1,3 @@
-/*import { pool } from "../db.js";
-import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";*/
 const { pool } = require("../db.js");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");

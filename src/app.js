@@ -1,12 +1,3 @@
-/*import express from "express";
-import userRoutes from "./routes/users.routes.js";
-import dataRoutes from "./routes/resDev.routes.js";
-const PORT = 3000;
-import cors from "cors";
-import { login } from "./controllers/users.controllers.js";
-import { celebrate, Joi, errors } from "celebrate";
-import { createUser } from "./controllers/users.controllers.js";*/
-
 const express = require("express");
 const userRoutes = require("./routes/users.routes.js");
 const dataRoutes = require("./routes/resDev.routes.js");
@@ -58,23 +49,23 @@ app.use(userRoutes);
 app.use(dataRoutes);
 app.post(
   "/inicio-sesion",
-  /*celebrate({
+  celebrate({
     body: Joi.object().keys({
       email: Joi.string().required().email(),
-      password: Joi.string().required().min(8),
+      contraseña: Joi.string().required().min(8),
     }),
-  }),*/
+  }),
   login
 );
 
 app.post(
   "/registro",
-  /*celebrate({
+  celebrate({
     body: Joi.object().keys({
       email: Joi.string().required().email(),
-      password: Joi.string().required().min(8),
+      contraseña: Joi.string().required().min(8),
     }),
-  }),*/
+  }),
   createUser
 );
 
