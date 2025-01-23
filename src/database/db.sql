@@ -33,4 +33,4 @@ CREATE TABLE files (
 CREATE INDEX idx_release_month_fiscal_year ON files(release_month, fiscal_year);
 
 INSERT INTO developers (developer_name, mentor_id) VALUES
-('Jazmin Toledo',1),('ALexis Huerta',2),('Avelino Gomez',3),('Brandon Marquez',1),('Miguel Sanchez',1),('Javier Belmont',1),('Noe Rodriguez',1)
+('Jazmin Toledo',1),('ALexis Huerta',2),('Avelino Gomez',3),('Brandon Marquez',1),('Miguel Sanchez',1),('Javier Belmont',1),('Noe Rodriguez',1);
