@@ -6,7 +6,7 @@ const { login, createUser } = require("./controllers/users.controllers.js");
 const { celebrate, Joi, erros } = require("celebrate");
 
 const app = express();
-const PORT = 3000;
+const PORT = 3001;
 
 app.use(express.json());
 
