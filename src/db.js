@@ -7,7 +7,7 @@ module.exports.pool = new pg.Pool({
   user: "postgres",
   host: "localhost",
   password: process.env.PSQL_SECRET,
-  //database: "parker_test",
-  database: "postgres",
+  database: "parker_test",
+  //database: "postgres",
   port: "5432",
 });
